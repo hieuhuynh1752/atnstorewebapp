@@ -346,6 +346,7 @@
     </script>
  <?php   
 
+    if(isset($_POST[submit])){
     $dbc = parse_url(getenv("DATABASE_URL"));
     $pdo = new PDO("pgsql:" . sprintf(
             "host=ec2-107-22-238-217.compute-1.amazonaws.com;port=5432;user=bmrlbiyrzmjzir;password=abd4bf8a966d95d972d40e56c70b26f7d79492bf119f19630b59c72685007b8c;dbname=ddsg2vt3pgj067",
@@ -358,6 +359,11 @@
                 VALUES ('$_POST[Categoryname]','$_POST[desscription]');";
     $stmt = $pdo->prepare($query);
     $stmt->execute();
+    }
+else
+{
+    
+}
     ?>
 
 </body>
