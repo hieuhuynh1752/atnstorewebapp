@@ -3,7 +3,7 @@
 		try {
 			$dbc = parse_url(getenv("DATABASE_URL"));
    			$pdo = new PDO("pgsql:" . sprintf(
-        	"host=ec2-107-22-238-217.compute-1.amazonaws.com;port=5432;user=bmrlbiyrzmjzir;password=abd4bf8a966d95d972d40e56c70b26f7d79492bf119f19630b59c72685007b8c;dbname=ddsg2vt3pgj",
+        	"host=ec2-107-22-238-217.compute-1.amazonaws.com;port=5432;user=bmrlbiyrzmjzir;password=abd4bf8a966d95d972d40e56c70b26f7d79492bf119f19630b59c72685007b8c;dbname=ddsg2vt3pgj067",
         	$dbc["host"],
         	$dbc["port"],
         	$dbc["user"],
@@ -18,7 +18,7 @@
 
 	function get_categories(){
 		$db = getDB();// Connect to database
-		$query ="SELECT * FROM public.categories";
+		$query ="SELECT * FROM categories";
 		try {
 			$statement = $db->prepare($query);
 			$statement->execute();
