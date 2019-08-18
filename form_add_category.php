@@ -359,6 +359,7 @@
                 VALUES ('$_POST[Categoryname]','$_POST[desscription]');";
     $stmt = $pdo->prepare($query);
     $stmt->execute();
+    header("location: tables_categories.php");
     }
 else
 {
