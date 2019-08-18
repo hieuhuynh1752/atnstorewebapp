@@ -354,7 +354,7 @@
             $dbc["user"],
             $dbc["pass"],
             ltrim($dbc["path"], "/")));
-    $query ="INSERT INTO public.categories(categoryname, description)
+    $query ="INSERT INTO categories(categoryname, description)
                 VALUES ('$_POST[Categoryname]','$_POST[desscription]');";
     $stmt = $pdo->prepare($query);
     $stmt->execute();
