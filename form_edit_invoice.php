@@ -227,11 +227,10 @@
                                                  ?>
                                                 <option value="<?php echo $value['productid'] ?>"><?php echo $value['productname'] ?></option>
                                                 
-                                                
+                                                <?php } ?>
 
                                             </select> 
-                                            <label> Price: <?php echo $value['price'] ?></label>
-                                            <?php } ?>                       
+                                                                
                                         </div>
                                     </div>
 
