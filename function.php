@@ -18,7 +18,7 @@
 
 	function get_categories(){
 		$db = getDB();// Connect to database
-		$query ="SELECT * FROM categories";
+		$query ="SELECT * FROM public.categories";
 		try {
 			$statement = $db->prepare($query);
 			$statement->execute();
